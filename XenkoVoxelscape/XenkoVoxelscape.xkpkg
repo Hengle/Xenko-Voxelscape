@@ -1,0 +1,44 @@
+!Package
+Id: e0355128-8ee1-4abb-b228-eb4b01362d34
+SerializedVersion: {Assets: 0.0.4}
+Meta:
+    Name: XenkoVoxelscape
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: XenkoVoxelscape
+    Dependencies:
+        -   Name: Xenko
+            Version: 3.0.0.9
+            RootAssets: []
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+            -   Path: XenkoVoxelscape.Game/Effects
+        ResourceFolders:
+            - Resources
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: c6c1f903-ffcd-4e31-91b5-bb33fea6cd15
+                Location: XenkoVoxelscape.Game/XenkoVoxelscape.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+        ResourceFolders: []
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 85bc36f6-cf4a-47dd-9a94-b57b5fa09c7a
+                Location: XenkoVoxelscape.Windows/XenkoVoxelscape.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets:
+    - 16aa1587-bb08-41d8-aea9-76dc8cbbc6c8:Voxel Mesh Material
