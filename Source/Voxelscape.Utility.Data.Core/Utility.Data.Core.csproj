@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8439BE7A-13E3-4CCB-A33C-2724D6408447}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voxelscape.Utility.Data.Core</RootNamespace>
+    <AssemblyName>Voxelscape.Utility.Data.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)Build\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CONTRACTSREQUIRES;CONTRACTSASSERT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DocumentationFile>..\..\Build\Debug\Voxelscape.Utility.Data.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\Release\Voxelscape.Utility.Data.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseContracts|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\ReleaseContracts</OutputPath>
+    <DefineConstants>TRACE;CONTRACTSREQUIRES</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\ReleaseContracts\Voxelscape.Utility.Data.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MiscUtil, Version=0.2.0.0, Culture=neutral, PublicKeyToken=d3c42c4bfacf7596, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\JonSkeet.MiscUtil.0.2.0\lib\net35\MiscUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Context, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Context.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Coordination, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Coordination.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Coordination.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Interop.WaitHandles, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Interop.WaitHandles.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Interop.WaitHandles.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Oop, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Oop.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Oop.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Tasks, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Tasks.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Cancellation, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.Cancellation.1.0.5\lib\netstandard2.0\Nito.Cancellation.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Collections.Deque, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.Collections.Deque.1.0.4\lib\netstandard2.0\Nito.Collections.Deque.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Disposables, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.Disposables.2.0.0\lib\netstandard2.0\Nito.Disposables.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Tpl.Dataflow.4.5.24\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\_Cache\AsyncCache{TKey,TState,TValue}.cs" />
+    <Compile Include="Caching\_Cache\AsyncCache{TKey,TValue}.cs" />
+    <Compile Include="Caching\_Cache\CacheDisposalWrapper{TKey,TState,TValue}.cs" />
+    <Compile Include="Caching\_Cache\CacheDisposalWrapper{TKey,TValue}.cs" />
+    <Compile Include="Caching\_Stash\CompactingQueueStash.cs" />
+    <Compile Include="Caching\_Stash\ExpiryStash.cs" />
+    <Compile Include="Caching\_Stash\InstantExpiryStash{TKey}.cs" />
+    <Compile Include="Caching\_Stash\PoolStash.cs" />
+    <Compile Include="Caching\_Stash\PoolStash{TKey,TValue}.cs" />
+    <Compile Include="Caching\_Stash\QueueStash{TKey}.cs" />
+    <Compile Include="Caching\_Values\AbstractStashedCacheValue{TKey,TValue}.cs" />
+    <Compile Include="Caching\_Values\CacheValue.cs" />
+    <Compile Include="Caching\_Values\InstantExpiryCacheValue{TKey,TValue}.cs" />
+    <Compile Include="Caching\_Values\StashedCacheValue.cs" />
+    <Compile Include="Caching\_Values\StashedCompositeCacheValue{TKey,TValue}.cs" />
+    <Compile Include="Caching\_Values\StashedDisposableCacheValue{TKey,TValue}.cs" />
+    <Compile Include="Pools\AbstractPoolWrapper{T}.cs" />
+    <Compile Include="Pools\AsyncFactoryPool{T}.cs" />
+    <Compile Include="Pools\BoundedAsyncFactoryPool{T}.cs" />
+    <Compile Include="Pools\BoundedFactoryPool{T}.cs" />
+    <Compile Include="Pools\BoundedFactoryUtilities.cs" />
+    <Compile Include="Pools\FactoryPool{T}.cs" />
+    <Compile Include="Pools\Pool.cs" />
+    <Compile Include="Pools\Pool{T}.cs" />
+    <Compile Include="Pools\TrackingPool{T}.cs" />
+    <Compile Include="Pools\_Options\ImmutablePoolOptions{T}.cs" />
+    <Compile Include="Pools\_Options\PoolOptions.cs" />
+    <Compile Include="Pools\_Options\PoolOptions{T}.cs" />
+    <Compile Include="Pools\_Options\TrackingPoolOptions{T}.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\_Conversions\ByteConverter.cs" />
+    <Compile Include="Serialization\_Endianness\EndiannessExtensions.cs" />
+    <Compile Include="Serialization\_Endianness\EndianProvider.cs" />
+    <Compile Include="Serialization\_Endianness\EndianProvider{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Collections\ReadOnlyCollectionConstantSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Collections\ReadOnlyCollectionSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Collections\ReadOnlyListConstantSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Collections\ReadOnlyListSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Base\AbstractCompositeSerializer{TValue,T1,T2,T3,T4,T5,T6,T7,T8}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Base\AbstractCompositeSerializer{TValue,T1,T2,T3,T4,T5,T6,T7}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Base\AbstractCompositeSerializer{TValue,T1,T2,T3,T4,T5,T6}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Base\AbstractCompositeSerializer{TValue,T1,T2,T3,T4,T5}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Base\AbstractCompositeSerializer{TValue,T1,T2,T3,T4}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Base\AbstractCompositeSerializer{TValue,T1,T2,T3}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Base\AbstractCompositeSerializer{TValue,T1,T2}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Base\AbstractCompositeSerializer{TValue,T}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Constant\AbstractCompositeConstantSerializer{TValue,T1,T2,T3,T4,T5,T6,T7,T8}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Constant\AbstractCompositeConstantSerializer{TValue,T1,T2,T3,T4,T5,T6,T7}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Constant\AbstractCompositeConstantSerializer{TValue,T1,T2,T3,T4,T5,T6}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Constant\AbstractCompositeConstantSerializer{TValue,T1,T2,T3,T4,T5}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Constant\AbstractCompositeConstantSerializer{TValue,T1,T2,T3,T4}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Constant\AbstractCompositeConstantSerializer{TValue,T1,T2,T3}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Constant\AbstractCompositeConstantSerializer{TValue,T1,T2}.cs" />
+    <Compile Include="Serialization\_Serializers\AbstractComposite\Constant\AbstractCompositeConstantSerializer{TValue,T}.cs" />
+    <Compile Include="Serialization\_Serializers\Collections\ArrayConstantSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Collections\ArraySerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Collections\CollectionConstantSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Collections\CollectionSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Collections\DeserializeArray.cs" />
+    <Compile Include="Serialization\_Serializers\Enumerables\Abstract\AbstractConstantEnumerableInlineSerializer{TEnumerable,TValue}.cs" />
+    <Compile Include="Serialization\_Serializers\Enumerables\Abstract\AbstractConstantEnumerableSerializer{TEnumerable,TValue}.cs" />
+    <Compile Include="Serialization\_Serializers\Enumerables\Abstract\AbstractEnumerableInlineSerializer{TEnumerable,TValue}.cs" />
+    <Compile Include="Serialization\_Serializers\Enumerables\Abstract\AbstractEnumerableSerializer{TEnumerable,TValue}.cs" />
+    <Compile Include="Serialization\_Serializers\Enumerables\Count\InferCountSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Enumerables\Count\SerializeCount.cs" />
+    <Compile Include="Serialization\_Serializers\Enumerables\EnumerableConstantSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Enumerables\EnumerableSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Enumerables\SerializeEnumerable.cs" />
+    <Compile Include="Serialization\_Serializers\KeyedComposite\EnumKeyedCompositeSerializer{TKey,TValue}.cs" />
+    <Compile Include="Serialization\_Serializers\KeyedComposite\KeyedCompositeSerializer{TKey,TValue}.cs" />
+    <Compile Include="Serialization\_Serializers\Misc\ConverterConstantSerializer{TValue,TSerialize}.cs" />
+    <Compile Include="Serialization\_Serializers\Misc\ConverterSerializer{TValue,TSerialize}.cs" />
+    <Compile Include="Serialization\_Serializers\Misc\FixedConstantSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Misc\FixedConstantSerializer{T}.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\BoolSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\ByteSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\CharSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\DecimalSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\DoubleSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\FloatSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\IntSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\LongSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\SByteSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\ShortSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\Static\SerializeInt.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\Static\Serializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\UIntSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\ULongSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\Primitives\UShortSerializer.cs" />
+    <Compile Include="Serialization\_Serializers\StringSerializer.cs" />
+    <Compile Include="Serialization\_Streaming\BufferedArray.cs" />
+    <Compile Include="Serialization\_Streaming\BufferedByteStream.cs" />
+    <Compile Include="Serialization\_Streaming\ByteStreamSerializer{T}.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\AbstractDateTimeValueKey{T}.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\AbstractNumberValueKey{T}.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\AbstractValueKey{T}.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\BoolValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\ByteValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\CharValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\DateTimeFormatValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\DateTimeValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\DecimalValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\DoubleValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\FloatValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\GuidFormatValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\GuidValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\IntValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\LongValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\SByteValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\ShortValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\StringValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\UIntValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\ULongValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\Keys\UShortValueKey.cs" />
+    <Compile Include="Stores\_KeyValue\KeyValueStore{TEntity}.cs" />
+    <Compile Include="Stores\_Locked\LockedAsyncStore.cs" />
+    <Compile Include="Stores\_Locked\LockedAsyncStore{TEntity}.cs" />
+    <Compile Include="Stores\_Locked\LockedTransactionalStore.cs" />
+    <Compile Include="Stores\_Locked\LockedTransactionalStore{TEntity}.cs" />
+    <Compile Include="Stores\_Migrated\MigratedAsyncStore{TEntity}.cs" />
+    <Compile Include="Stores\_Migrated\MigratedTransactionalStore{TEntity}.cs" />
+    <Compile Include="Stores\_Partitioned\AsyncStorePartitioner.cs" />
+    <Compile Include="Stores\_Partitioned\PartitionedAsyncStore.cs" />
+    <Compile Include="Stores\_Configuration\PersistenceConfig.cs" />
+    <Compile Include="Stores\_Partitioned\PartitionedConfigFactory.cs" />
+    <Compile Include="Stores\_Typed\TypedAsyncStore{TEntity}.cs" />
+    <Compile Include="Stores\_Typed\TypedTransactionalStore{TEntity}.cs" />
+    <Compile Include="Stores\_Typed\TypedTransaction{TEntity}.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Voxelscape.Utility.Common.Pact\Utility.Common.Pact.csproj">
+      <Project>{2b7bdef6-f562-420a-9e37-dd3ef117524a}</Project>
+      <Name>Utility.Common.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Common.Core\Utility.Common.Core.csproj">
+      <Project>{12731f69-38c0-46b6-bc35-37f12d72e4ac}</Project>
+      <Name>Utility.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Data.Pact\Utility.Data.Pact.csproj">
+      <Project>{700d43c6-a2a0-4098-a55c-67d64a828b02}</Project>
+      <Name>Utility.Data.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Concurrency.AsyncEx\Utility.Concurrency.AsyncEx.csproj">
+      <Project>{ce670330-a8e9-4c4f-8d0f-e99d2317530d}</Project>
+      <Name>Utility.Concurrency.AsyncEx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Concurrency.Core\Utility.Concurrency.Core.csproj">
+      <Project>{71bfc523-7619-4fca-a87b-b9d48ca93f6d}</Project>
+      <Name>Utility.Concurrency.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Concurrency.Pact\Utility.Concurrency.Pact.csproj">
+      <Project>{1c1af8d2-9c71-465b-b648-e86d7cf0ae8d}</Project>
+      <Name>Utility.Concurrency.Pact</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>

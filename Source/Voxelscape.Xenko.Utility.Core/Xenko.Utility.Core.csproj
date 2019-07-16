@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xenko.3.0.0.9\build\Xenko.props" Condition="Exists('..\..\packages\Xenko.3.0.0.9\build\Xenko.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1313868D-4780-4991-A06D-0A03D72C806E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voxelscape.Xenko.Utility.Core</RootNamespace>
+    <AssemblyName>Voxelscape.Xenko.Utility.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)Build\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CONTRACTSREQUIRES;CONTRACTSASSERT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DocumentationFile>..\..\Build\Debug\Voxelscape.Xenko.Utility.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\Release\Voxelscape.Xenko.Utility.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseContracts|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\ReleaseContracts</OutputPath>
+    <DefineConstants>TRACE;CONTRACTSREQUIRES</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\ReleaseContracts\Voxelscape.Xenko.Utility.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MonoGame.Framework.DesktopGL.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conversions\ConversionExtensions.cs" />
+    <Compile Include="Conversions\ObservableConversionExtensions.cs" />
+    <Compile Include="Meshing\AbstractProceduralMeshFactory{TVertex}.cs" />
+    <Compile Include="Meshing\MeshData.cs" />
+    <Compile Include="Meshing\MeshDataTransfer16.cs" />
+    <Compile Include="Meshing\MeshDataTransferOptions.cs" />
+    <Compile Include="Components\ObservablePosition.cs" />
+    <Compile Include="Meshing\ProceduralMeshFactory16{TVertex}.cs" />
+    <Compile Include="Meshing\ProceduralMeshFactory32{TVertex}.cs" />
+    <Compile Include="Vertices\VertexFormat.cs" />
+    <Compile Include="Vertices\VertexPositionNormalColorTexture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Voxelscape.Common.Contouring.Core\Common.Contouring.Core.csproj">
+      <Project>{8f56930d-b525-4abd-8c63-2184487e4d12}</Project>
+      <Name>Common.Contouring.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Common.Contouring.Pact\Common.Contouring.Pact.csproj">
+      <Project>{d5a5b237-1a5f-4fbe-a1c8-f3f10fbc809b}</Project>
+      <Name>Common.Contouring.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Common.Indexing.Core\Common.Indexing.Core.csproj">
+      <Project>{F14A28A8-DABD-4EAB-9B12-6DC936140EA1}</Project>
+      <Name>Common.Indexing.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Common.Indexing.Pact\Common.Indexing.Pact.csproj">
+      <Project>{1f24832e-84b1-4da6-8e98-32dac975685c}</Project>
+      <Name>Common.Indexing.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Stages.Management.Core\Stages.Management.Core.csproj">
+      <Project>{33559F24-686E-4709-B38C-D67B31739F0B}</Project>
+      <Name>Stages.Management.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Stages.Management.Pact\Stages.Management.Pact.csproj">
+      <Project>{CE3BA4F3-6AA4-4A79-8766-E11B78FA8D4E}</Project>
+      <Name>Stages.Management.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Common.Core\Utility.Common.Core.csproj">
+      <Project>{12731f69-38c0-46b6-bc35-37f12d72e4ac}</Project>
+      <Name>Utility.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Common.Pact\Utility.Common.Pact.csproj">
+      <Project>{2b7bdef6-f562-420a-9e37-dd3ef117524a}</Project>
+      <Name>Utility.Common.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Concurrency.Core\Utility.Concurrency.Core.csproj">
+      <Project>{71bfc523-7619-4fca-a87b-b9d48ca93f6d}</Project>
+      <Name>Utility.Concurrency.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Concurrency.Pact\Utility.Concurrency.Pact.csproj">
+      <Project>{1c1af8d2-9c71-465b-b648-e86d7cf0ae8d}</Project>
+      <Name>Utility.Concurrency.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Data.Core\Utility.Data.Core.csproj">
+      <Project>{8439be7a-13e3-4ccb-a33c-2724d6408447}</Project>
+      <Name>Utility.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Data.Pact\Utility.Data.Pact.csproj">
+      <Project>{700d43c6-a2a0-4098-a55c-67d64a828b02}</Project>
+      <Name>Utility.Data.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Xenko.Utility.Pact\Xenko.Utility.Pact.csproj">
+      <Project>{2db0be6f-8e07-4c6c-a29f-c07a8c5af295}</Project>
+      <Name>Xenko.Utility.Pact</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xenko.3.0.0.9\build\Xenko.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xenko.3.0.0.9\build\Xenko.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xenko.3.0.0.9\build\Xenko.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xenko.3.0.0.9\build\Xenko.targets'))" />
+    <Error Condition="!Exists('..\..\packages\MonoGame.Framework.DesktopGL.3.7.1.189\build\MonoGame.Framework.DesktopGL.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\MonoGame.Framework.DesktopGL.3.7.1.189\build\MonoGame.Framework.DesktopGL.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Xenko.3.0.0.9\build\Xenko.targets" Condition="Exists('..\..\packages\Xenko.3.0.0.9\build\Xenko.targets')" />
+  <Import Project="..\..\packages\MonoGame.Framework.DesktopGL.3.7.1.189\build\MonoGame.Framework.DesktopGL.targets" Condition="Exists('..\..\packages\MonoGame.Framework.DesktopGL.3.7.1.189\build\MonoGame.Framework.DesktopGL.targets')" />
+</Project>

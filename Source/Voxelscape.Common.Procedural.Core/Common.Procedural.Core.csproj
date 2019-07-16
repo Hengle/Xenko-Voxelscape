@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9E4FA5D6-1EA7-44B4-BCF0-BD068B12E86C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voxelscape.Common.Procedural.Core</RootNamespace>
+    <AssemblyName>Voxelscape.Common.Procedural.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)Build\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CONTRACTSREQUIRES;CONTRACTSASSERT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DocumentationFile>..\..\Build\Debug\Voxelscape.Common.Procedural.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\Release\Voxelscape.Common.Procedural.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseContracts|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\ReleaseContracts</OutputPath>
+    <DefineConstants>TRACE;CONTRACTSREQUIRES</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\ReleaseContracts\Voxelscape.Common.Procedural.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mathematics\Gradient.cs" />
+    <Compile Include="Mathematics\Interpolation.cs" />
+    <Compile Include="Mathematics\InterpolationExtensions.cs" />
+    <Compile Include="Noise\_Distorted\DistortedNoise1D.cs" />
+    <Compile Include="Noise\_Distorted\DistortedNoise2D.cs" />
+    <Compile Include="Noise\_Distorted\DistortedNoise3D.cs" />
+    <Compile Include="Noise\_Distorted\DistortedNoise4D.cs" />
+    <Compile Include="Noise\_Distorters\AmplitudeDistorter.cs" />
+    <Compile Include="Noise\_Distorters\ClampDistorter.cs" />
+    <Compile Include="Noise\_Distorters\CompositeDistorter.cs" />
+    <Compile Include="Noise\_Distorters\ConvertRangeDistorter.cs" />
+    <Compile Include="Noise\_Distorters\FluentAPI\INoiseDistorterFluentExtensions.cs" />
+    <Compile Include="Noise\_Distorters\FrequencyDistorter.cs" />
+    <Compile Include="Noise\_Distorters\FluentAPI\NoiseDistorter.cs" />
+    <Compile Include="Noise\_Distorters\OctavesDistorter.cs" />
+    <Compile Include="Noise\_Distorters\PureDistorter.cs" />
+    <Compile Include="Noise\_Distorters\ShiftDistorter.cs" />
+    <Compile Include="Noise\NoiseFactory.cs" />
+    <Compile Include="Noise\SimplexNoise.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Voxelscape.Common.Procedural.Pact\Common.Procedural.Pact.csproj">
+      <Project>{60f07ad5-9503-475d-a711-05b26ce1979e}</Project>
+      <Name>Common.Procedural.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Common.Core\Utility.Common.Core.csproj">
+      <Project>{12731f69-38c0-46b6-bc35-37f12d72e4ac}</Project>
+      <Name>Utility.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Common.Pact\Utility.Common.Pact.csproj">
+      <Project>{2b7bdef6-f562-420a-9e37-dd3ef117524a}</Project>
+      <Name>Utility.Common.Pact</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

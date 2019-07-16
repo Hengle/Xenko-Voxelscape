@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B7BDEF6-F562-420A-9E37-DD3EF117524A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voxelscape.Utility.Common.Pact</RootNamespace>
+    <AssemblyName>Voxelscape.Utility.Common.Pact</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)Build\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CONTRACTSREQUIRES;CONTRACTSASSERT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DocumentationFile>..\..\Build\Debug\Voxelscape.Utility.Common.Pact.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\Release\Voxelscape.Utility.Common.Pact.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseContracts|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\ReleaseContracts</OutputPath>
+    <DefineConstants>TRACE;CONTRACTSREQUIRES</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\ReleaseContracts\Voxelscape.Utility.Common.Pact.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\Capacity.cs" />
+    <Compile Include="Collections\_BCLContracts\ICollectionContracts.cs" />
+    <Compile Include="Collections\_BCLContracts\IDictionaryContracts.cs" />
+    <Compile Include="Collections\_BCLContracts\IEqualityComparerContracts.cs" />
+    <Compile Include="Collections\_BCLContracts\IListContracts.cs" />
+    <Compile Include="Collections\_BCLContracts\IProducerConsumerCollectionContracts.cs" />
+    <Compile Include="Collections\_BCLContracts\IReadOnlyDictionaryContracts.cs" />
+    <Compile Include="Collections\_BCLContracts\IReadOnlyListContracts.cs" />
+    <Compile Include="Collections\_Extensions\ArrayExtensions.cs" />
+    <Compile Include="Collections\_Extensions\AsReadOnlyExtensions.cs" />
+    <Compile Include="Collections\_BCLContracts\ISetContracts.cs" />
+    <Compile Include="Collections\_Extensions\BatchSelectExtensions.cs" />
+    <Compile Include="Collections\_Extensions\BitArrayExtensions.cs" />
+    <Compile Include="Collections\_Extensions\ICollectionExtensions.cs" />
+    <Compile Include="Collections\_Extensions\IDictionaryExtensions.cs" />
+    <Compile Include="Collections\_Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Collections\_Extensions\IListExtensions.cs" />
+    <Compile Include="Collections\_Extensions\LinkedListExtensions.cs" />
+    <Compile Include="Collections\_Extensions\LinkedListNodeExtensions.cs" />
+    <Compile Include="Collections\_Extensions\QueueExtensions.cs" />
+    <Compile Include="Collections\_Extensions\StackExtensions.cs" />
+    <Compile Include="Collections\_Extensions\ToReadOnlyExtensions.cs" />
+    <Compile Include="Collections\_Interfaces\IReadOnlyLargeCollection{T}.cs" />
+    <Compile Include="Collections\_Interfaces\IReadOnlySet{T}.cs" />
+    <Compile Include="Collections\_Interfaces\ITypeSet.cs" />
+    <Compile Include="Collections\_Interfaces\ITypeSet{TBase}.cs" />
+    <Compile Include="Collections\_Internal\ReadOnlyCollectionWrapper{T}.cs" />
+    <Compile Include="Collections\_Internal\ReadOnlyDictionaryWrapper{TKey,TValue}.cs" />
+    <Compile Include="Collections\_Internal\ReadOnlyListWrapper{T}.cs" />
+    <Compile Include="Conversions\ITwoWayConverter{TSource,TResult}.cs" />
+    <Compile Include="Diagnostics\ContractException.cs" />
+    <Compile Include="Diagnostics\Contracts.cs" />
+    <Compile Include="Diagnostics\IDeveloperModeStatus.cs" />
+    <Compile Include="Disposables\AbstractDisposable.cs" />
+    <Compile Include="Disposables\Disposable.cs" />
+    <Compile Include="Disposables\FinalizerRanException.cs" />
+    <Compile Include="Disposables\IDisposableValue{T}.cs" />
+    <Compile Include="Disposables\IDisposed.cs" />
+    <Compile Include="Disposables\ITemporaryValue{T}.cs" />
+    <Compile Include="Disposables\ITryDisposable.cs" />
+    <Compile Include="Disposables\IVisiblyDisposable.cs" />
+    <Compile Include="Enums\EnumExtensions.cs" />
+    <Compile Include="Events\EventHandlerExtensions.cs" />
+    <Compile Include="Events\TypesafeEventHandler.cs" />
+    <Compile Include="Exceptions\InvalidEnumArgument.cs" />
+    <Compile Include="Exceptions\ObjectExpiredException.cs" />
+    <Compile Include="Exceptions\TypeParameterException.cs" />
+    <Compile Include="Exceptions\UnreachableCodeException.cs" />
+    <Compile Include="Factories\IAsyncFactory{T,TResult}.cs" />
+    <Compile Include="Factories\IAsyncFactory{T1,T2,T3,T4,T5,T6,T7,T8,TResult}.cs" />
+    <Compile Include="Factories\IAsyncFactory{T1,T2,T3,T4,T5,T6,T7,TResult}.cs" />
+    <Compile Include="Factories\IAsyncFactory{T1,T2,T3,T4,T5,T6,TResult}.cs" />
+    <Compile Include="Factories\IAsyncFactory{T1,T2,T3,T4,T5,TResult}.cs" />
+    <Compile Include="Factories\IAsyncFactory{T1,T2,T3,T4,TResult}.cs" />
+    <Compile Include="Factories\IAsyncFactory{T1,T2,T3,TResult}.cs" />
+    <Compile Include="Factories\IAsyncFactory{T1,T2,TResult}.cs" />
+    <Compile Include="Factories\IAsyncFactory{TResult}.cs" />
+    <Compile Include="Factories\IFactoryExtensions.cs" />
+    <Compile Include="Factories\IFactory{T,TResult}.cs" />
+    <Compile Include="Factories\IFactory{T1,T2,T3,T4,T5,T6,T7,T8,TResult}.cs" />
+    <Compile Include="Factories\IFactory{T1,T2,T3,T4,T5,T6,T7,TResult}.cs" />
+    <Compile Include="Factories\IFactory{T1,T2,T3,T4,T5,T6,TResult}.cs" />
+    <Compile Include="Factories\IFactory{T1,T2,T3,T4,T5,TResult}.cs" />
+    <Compile Include="Factories\IFactory{T1,T2,T3,T4,TResult}.cs" />
+    <Compile Include="Factories\IFactory{T1,T2,T3,TResult}.cs" />
+    <Compile Include="Factories\IFactory{T1,T2,TResult}.cs" />
+    <Compile Include="Factories\IFactory{TResult}.cs" />
+    <Compile Include="Hashing\IHash{THash}.cs" />
+    <Compile Include="Mathematics\MathUtilities.cs" />
+    <Compile Include="Mathematics\NumberExtensions\ByteExtensions.cs" />
+    <Compile Include="Mathematics\NumberExtensions\IComparableMathExtensions.cs" />
+    <Compile Include="Mathematics\NumberExtensions\IntExtensions.cs" />
+    <Compile Include="Mathematics\NumberExtensions\LongExtensions.cs" />
+    <Compile Include="Mathematics\NumberExtensions\SByteExtensions.cs" />
+    <Compile Include="Mathematics\NumberExtensions\ShortExtensions.cs" />
+    <Compile Include="Mathematics\NumberExtensions\UIntExtensions.cs" />
+    <Compile Include="Mathematics\NumberExtensions\ULongExtensions.cs" />
+    <Compile Include="Mathematics\NumberExtensions\UShortExtensions.cs" />
+    <Compile Include="Mathematics\ThreadLocalRandom.cs" />
+    <Compile Include="Progress\IDiscreteProgress.cs" />
+    <Compile Include="Progress\IDiscreteProgressExtensions.cs" />
+    <Compile Include="Progress\IObservableDiscreteProgress{T}.cs" />
+    <Compile Include="Progress\IObservableProgress{T}.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shareables\IShareable.cs" />
+    <Compile Include="Shareables\IShareableExtensions.cs" />
+    <Compile Include="Shareables\IShareableValue{T}.cs" />
+    <Compile Include="Shareables\ShareStruct.cs" />
+    <Compile Include="Strings\StringBuilderExtensions.cs" />
+    <Compile Include="Strings\StringExtensions.cs" />
+    <Compile Include="Comparisons\ComparisonResult.cs" />
+    <Compile Include="Comparisons\ComparisonUtilities.cs" />
+    <Compile Include="Comparisons\IComparableExtensions.cs" />
+    <Compile Include="Comparisons\IComparerExtensions.cs" />
+    <Compile Include="Types\_Interfaces\IKeyed{T}.cs" />
+    <Compile Include="Types\_Interfaces\IResettable.cs" />
+    <Compile Include="Types\ObjectExtensions.cs" />
+    <Compile Include="Types\_Primitives\PrimitiveType.cs" />
+    <Compile Include="Types\_Primitives\PrimitiveTypeExtensions.cs" />
+    <Compile Include="Types\_Primitives\PrimitiveTypeSizeExtensions.cs" />
+    <Compile Include="Types\_Primitives\PrimitiveTypeSizes.cs" />
+    <Compile Include="Types\TypeExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>

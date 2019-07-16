@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{082DE191-B122-4748-995B-CC44C9D47113}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Voxelscape.Stages.TestConsole</RootNamespace>
+    <AssemblyName>Voxelscape.Stages.TestConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)Build\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CONTRACTSREQUIRES;CONTRACTSASSERT</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DocumentationFile>..\..\Build\Debug\Voxelscape.Stages.TestConsole.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\Release\Voxelscape.Stages.TestConsole.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseContracts|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\ReleaseContracts</OutputPath>
+    <DefineConstants>TRACE;CONTRACTSREQUIRES</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>$(SolutionDir)Misc\Rulesets\VoxelscapeFullShared.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Build\ReleaseContracts\Voxelscape.Stages.TestConsole.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Nito.AsyncEx.Context, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Context.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Coordination, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Coordination.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Coordination.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Interop.WaitHandles, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Interop.WaitHandles.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Interop.WaitHandles.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Oop, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Oop.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Oop.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.AsyncEx.Tasks, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.AsyncEx.Tasks.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Cancellation, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.Cancellation.1.0.5\lib\netstandard2.0\Nito.Cancellation.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Collections.Deque, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.Collections.Deque.1.0.4\lib\netstandard2.0\Nito.Collections.Deque.dll</HintPath>
+    </Reference>
+    <Reference Include="Nito.Disposables, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nito.Disposables.2.0.0\lib\netstandard2.0\Nito.Disposables.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Tpl.Dataflow.4.5.24\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewGenerationExample.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Voxelscape.Common.Contouring.Core\Common.Contouring.Core.csproj">
+      <Project>{8f56930d-b525-4abd-8c63-2184487e4d12}</Project>
+      <Name>Common.Contouring.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Common.Contouring.Pact\Common.Contouring.Pact.csproj">
+      <Project>{d5a5b237-1a5f-4fbe-a1c8-f3f10fbc809b}</Project>
+      <Name>Common.Contouring.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Common.Procedural.Core\Common.Procedural.Core.csproj">
+      <Project>{9E4FA5D6-1EA7-44B4-BCF0-BD068B12E86C}</Project>
+      <Name>Common.Procedural.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Common.Procedural.Pact\Common.Procedural.Pact.csproj">
+      <Project>{60F07AD5-9503-475D-A711-05B26CE1979E}</Project>
+      <Name>Common.Procedural.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Stages.Management.Core\Stages.Management.Core.csproj">
+      <Project>{33559f24-686e-4709-b38c-d67b31739f0b}</Project>
+      <Name>Stages.Management.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Stages.Management.Pact\Stages.Management.Pact.csproj">
+      <Project>{ce3ba4f3-6aa4-4a79-8766-e11b78fa8d4e}</Project>
+      <Name>Stages.Management.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Stages.Voxels.Core\Stages.Voxels.Core.csproj">
+      <Project>{38bfcb40-0923-49a1-a0d9-c075c0ac5a8e}</Project>
+      <Name>Stages.Voxels.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Stages.Voxels.Pact\Stages.Voxels.Pact.csproj">
+      <Project>{2baa2d98-3171-49eb-ba5d-4a087506ba92}</Project>
+      <Name>Stages.Voxels.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Stages.Voxels.SQLite\Stages.Voxels.SQLite.csproj">
+      <Project>{6cf535da-165b-4e9c-b299-058880b5c2b4}</Project>
+      <Name>Stages.Voxels.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Common.Core\Utility.Common.Core.csproj">
+      <Project>{12731f69-38c0-46b6-bc35-37f12d72e4ac}</Project>
+      <Name>Utility.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Common.Pact\Utility.Common.Pact.csproj">
+      <Project>{2b7bdef6-f562-420a-9e37-dd3ef117524a}</Project>
+      <Name>Utility.Common.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Common.Indexing.Core\Common.Indexing.Core.csproj">
+      <Project>{f14a28a8-dabd-4eab-9b12-6dc936140ea1}</Project>
+      <Name>Common.Indexing.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Common.Indexing.Pact\Common.Indexing.Pact.csproj">
+      <Project>{1f24832e-84b1-4da6-8e98-32dac975685c}</Project>
+      <Name>Common.Indexing.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Concurrency.Dataflow\Utility.Concurrency.Dataflow.csproj">
+      <Project>{969bd4a1-6352-4a3f-be1c-1f95a8f57239}</Project>
+      <Name>Utility.Concurrency.Dataflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Data.Core\Utility.Data.Core.csproj">
+      <Project>{8439be7a-13e3-4ccb-a33c-2724d6408447}</Project>
+      <Name>Utility.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Data.Pact\Utility.Data.Pact.csproj">
+      <Project>{700d43c6-a2a0-4098-a55c-67d64a828b02}</Project>
+      <Name>Utility.Data.Pact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Data.SQLite\Utility.Data.SQLite.csproj">
+      <Project>{eff8a79d-56ed-46da-977b-a7a1f22b8de6}</Project>
+      <Name>Utility.Data.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Concurrency.AsyncEx\Utility.Concurrency.AsyncEx.csproj">
+      <Project>{ce670330-a8e9-4c4f-8d0f-e99d2317530d}</Project>
+      <Name>Utility.Concurrency.AsyncEx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Concurrency.Core\Utility.Concurrency.Core.csproj">
+      <Project>{71BFC523-7619-4FCA-A87B-B9D48CA93F6D}</Project>
+      <Name>Utility.Concurrency.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voxelscape.Utility.Concurrency.Pact\Utility.Concurrency.Pact.csproj">
+      <Project>{1c1af8d2-9c71-465b-b648-e86d7cf0ae8d}</Project>
+      <Name>Utility.Concurrency.Pact</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

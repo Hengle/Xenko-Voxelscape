@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <RootNamespace>VoxelscapeXenkoLauncher</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xenko" Version="3.0.0.9">
+      <PrivateAssets>contentfiles;analyzers</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
